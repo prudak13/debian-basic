@@ -1,4 +1,4 @@
- name: debian-basic-install 
+- name: debian-basic-install 
   hosts: all
   become: true
   #### Install packages
