@@ -1,0 +1,44 @@
+ name: debian-basic-install 
+  hosts: all
+  become: true
+  #### Install packages
+  tasks:
+    - name: Update + Upgrade APT
+      apt:
+         update_cache: yes
+         upgrade: yes
+    - name: Install packages
+      apt:
+       pkg:
+        - python-apt
+        - vim
+        - sudo
+        - nmap
+        - bwm-ng
+        - munin-node
+        - munin-plugins-extra
+        - munin-plugins-core
+        - iptables-persistent
+        - msmtp
+        - fail2ban
+        - parted
+        - tcpdump
+        - dnsutils
+        - iperf3
+        - curl
+        - wget
+        - duplicity
+        - sshfs
+        - net-tools
+        - mc
+        - htop
+        - atop
+        - iotop
+        - iftop
+        - screen
+        - ethtool
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-properties-common
